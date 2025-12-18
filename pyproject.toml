@@ -1,0 +1,35 @@
+[project]
+name = "homelab-agent"
+version = "0.1.0.dev20251218234353"
+description = "AI-powered homelab management agent"
+authors = [{ name = "abi_jey", email = "git@public.abja.dev" }]
+readme = "README.md"
+requires-python = ">=3.11, <4.0"
+dependencies = [
+    "rich (>=14.2.0,<15.0.0)",
+    "typer (>=0.20.0,<0.21.0)",
+    "inquirer (>=3.4.0,<4.0.0)",
+    "textual (>=1.0.0,<2.0.0)",
+    "python-telegram-bot (>=21.0,<22.0)",
+    "google-adk (>=1.0.0,<2.0.0)",
+    "openai (>=1.0.0,<2.0.0)",
+    "fastapi (>=0.115.0,<1.0.0)",
+    "uvicorn (>=0.34.0,<1.0.0)",
+    "aiosqlite (>=0.20.0,<1.0.0)",
+]
+
+[project.scripts]
+hal = "homelab_agent.cli:app"
+
+[[tool.poetry.packages]]
+include = "homelab_agent"
+from = "src"
+
+# Include static files from React build
+[[tool.poetry.include]]
+path = "src/homelab_agent/webui/static"
+format = "wheel"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

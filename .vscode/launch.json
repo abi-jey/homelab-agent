@@ -1,0 +1,70 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "HAL Agent (Debug)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "homelab_agent.agent",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "HOMELAB_AGENT_RUNTIME_DIR": "/var/lib/homelab-agent",
+                "PYTHONPATH": "${workspaceFolder}/src"
+            },
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "HAL CLI (Debug)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "homelab_agent.cli",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "--help"
+            ],
+            "env": {
+                "HOMELAB_AGENT_RUNTIME_DIR": "/var/lib/homelab-agent",
+                "PYTHONPATH": "${workspaceFolder}/src"
+            },
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "HAL Init (Debug)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "homelab_agent.cli",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "init"
+            ],
+            "env": {
+                "HOMELAB_AGENT_RUNTIME_DIR": "/var/lib/homelab-agent",
+                "PYTHONPATH": "${workspaceFolder}/src"
+            },
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "HAL TUI (Debug)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "homelab_agent.cli",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "tui"
+            ],
+            "env": {
+                "HOMELAB_AGENT_RUNTIME_DIR": "/var/lib/homelab-agent",
+                "PYTHONPATH": "${workspaceFolder}/src"
+            },
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}
