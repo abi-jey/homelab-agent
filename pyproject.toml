@@ -1,6 +1,6 @@
 [project]
 name = "homelab-agent"
-version = "0.1.0.dev20251218234353"
+version = "0.1.0.dev20251219010621"
 description = "AI-powered homelab management agent"
 authors = [{ name = "abi_jey", email = "git@public.abja.dev" }]
 readme = "README.md"
